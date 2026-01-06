@@ -1,6 +1,16 @@
-import React from "react";
+import { Icon } from "@iconify/react";
+import React, { useState } from "react";
 
 const Footer = () => {
+  const [active, setActive] = useState(false);
+  
+    const handleHover = () => {
+      setActive(!active);
+    };
+  
+    const handleLeave = () => {
+      setActive(false);
+    };
   return (
     <footer className="bg-white text-black">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12 lg:flex-row lg:gap-12 lg:px-10">
@@ -35,9 +45,15 @@ const Footer = () => {
               placeholder="Email"
               className="w-full  border border-t-white border-r-white border-l-white border-b-[#e5e5e5] bg-white px-4 py-3 text-sm focus:border-black focus:outline-none"
             />
-            <button className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#e6ede5]  transition hover:bg-[#d5e0d3]">
-              <span aria-hidden>→</span>
-            </button>
+             <button
+                          onMouseEnter={handleHover}
+                          onMouseLeave={handleLeave}
+                          className="group p-3 bg-[#D4DCCF] rounded-2xl hover:bg-[#3A3D38] hover:text-white transition overflow-hidden overflow-x-hidden"
+                        >
+                          <div className={`${active ? "-rotate-45" : ""} transition`}>
+                            <Icon icon="solar:arrow-right-linear" />
+                          </div>
+                        </button>
           </div>
           <label className="flex items-center gap-2 text-xs">
             <input type="checkbox" className="h-4 w-4" />

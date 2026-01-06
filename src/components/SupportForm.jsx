@@ -45,7 +45,7 @@ const SupportForm = () => {
               placeholder="Subject*"
               name=""
               id=""
-              className="border border-t-white border-l-white border-r-white border-b-[#F8F5F0] px-5 py-3 mt-2"
+              className="border border-t-white border-l-white border-r-white border-b-[#979797] px-5 py-3 mt-2 w-[32vw]"
             />
             <div className="flex lg:flex-row flex-col lg:gap-10">
               <input
@@ -53,14 +53,14 @@ const SupportForm = () => {
                 placeholder="First Name*"
                 name=""
                 id=""
-                className="border border-t-white border-l-white border-r-white border-b-[#F8F5F0] px-5 py-3 mt-2"
+                className="border border-t-white border-l-white border-r-white border-b-[#979797] px-5 py-3 mt-2"
               />
               <input
                 type="text"
                 placeholder="Last Name*"
                 name=""
                 id=""
-                className="border border-t-white border-l-white border-r-white border-b-[#F8F5F0] px-5 py-3 mt-2"
+                className="border border-t-white border-l-white border-r-white border-b-[#979797] px-5 py-3 mt-2"
               />
             </div>
             <div className="flex lg:flex-row flex-col lg:gap-10">
@@ -69,14 +69,14 @@ const SupportForm = () => {
                 placeholder="Email*"
                 name=""
                 id=""
-                className="border border-t-white border-l-white border-r-white border-b-[#F8F5F0] px-5 py-3 mt-2"
+                className="border border-t-white border-l-white border-r-white border-b-[#979797] px-5 py-3 mt-2"
               />
               <input
                 type="text"
                 placeholder="Order Number"
                 name=""
                 id=""
-                className="border border-t-white border-l-white border-r-white border-b-[#F8F5F0] px-5 py-3 mt-2"
+                className="border border-t-white border-l-white border-r-white border-b-[#979797] px-5 py-3 mt-2"
               />
             </div>
             <input
@@ -84,9 +84,9 @@ const SupportForm = () => {
               placeholder="Message"
               name=""
               id=""
-              className="border border-t-white border-l-white border-r-white border-b-[#F8F5F0] px-5 py-3 mt-2"
+              className="border border-t-white border-l-white border-r-white border-b-[#979797] px-5 py-3 mt-2 w-[32vw]"
             />
-            
+
             <button
               onMouseEnter={handleHover}
               onMouseLeave={handleLeave}
@@ -94,7 +94,6 @@ const SupportForm = () => {
             >
               <div className={`${active ? "-rotate-45" : ""} transition`}>
                 <Icon icon="solar:arrow-right-linear" />
-               
               </div>
             </button>
           </form>
