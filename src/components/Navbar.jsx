@@ -44,13 +44,19 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 font-[DM_Sans] transition-transform transition-opacity duration-300 ${
         hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       } ${
-        mobileMenuOpen ? "bg-white text-black transition-transform transition-opacity duration-300" : "bg-transparent text-[#bbbbbb]"
+        mobileMenuOpen
+          ? "bg-white text-black transition-transform transition-opacity duration-300"
+          : "bg-transparent text-[#bbbbbb]"
       }`}
     >
       {/* Desktop View */}
       <div className="font-[DM_Sans] items-center justify-between px-15 py-4 bg-transparent lg:flex hidden">
-        <Link to="/">
-          <div className=" font-bold text-4xl">Nivest&reg;</div>
+        <Link to="/" className="inline-flex items-center">
+          <img
+            src="/white-logo.png"
+            alt="Nivest logo"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
         <div className="flex flex-row gap-5 leading-5 text-xl">
           {NavLink.map((nav) => (
@@ -77,8 +83,12 @@ const Navbar = () => {
       <div>
         <div className="font-[DM_Sans] items-center justify-between px-3 bg-transparent lg:hidden flex">
           <Example isOpen={mobileMenuOpen} onToggle={setMobileMenuOpen} />
-          <Link to={"/"}>
-            <div className=" font-bold text-4xl">Nivest&reg;</div>
+          <Link to={"/"} className="inline-flex items-center">
+            <img
+              src="/white-logo.png"
+              alt="Nivest logo"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
           <div>
             <HiOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
