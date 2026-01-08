@@ -5,14 +5,17 @@ import { Example } from "./AnimatedHamburgerButton.jsx";
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
 import Footer from "./Footer.jsx";
-import { BiLabel } from "react-icons/bi";
+import { useSelector } from "react-redux";
+import Cart from "./Cart.jsx";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const lastY = useRef(0);
 
   const [scrolled, setScrolled] = useState(false);
+  const cartItems = useSelector((state) => state.cart.items);
 
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -67,9 +70,7 @@ const Navbar = () => {
   return (
     <div
       className={`fixed top-0 left-0 right-0 z-50 font-[DM_Sans] transition-transform transition-opacity duration-300 ${backgroundClass} ${
-        hidden
-          ? "-translate-y-full opacity-0"
-          : "translate-y-0 opacity-100"
+        hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
       {/* Desktop View */}
@@ -98,7 +99,17 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex gap-2 items-center">
-          <HiOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
+          <button
+            onClick={() => setCartOpen(true)}
+            className="relative flex items-center gap-1 cursor-pointer hover:opacity-80"
+          >
+            <HiOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
+            {cartItems.length > 0 && (
+              <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-red-600 text-white text-xs flex items-center justify-center">
+                {cartItems.length}
+              </span>
+            )}
+          </button>
           <a href="https://whatsapp.com">
             <div className="border  border-[0.1vw] text-white p-2 rounded-full border-green-600 hover:bg-green-600 flex items-center gap-2">
               <svg
@@ -201,6 +212,7 @@ const Navbar = () => {
           <Footer />
         </motion.div>
       </div>
+      <Cart isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </div>
   );
 };

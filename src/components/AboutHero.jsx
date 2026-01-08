@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutHero = () => {
   return (
-    <div className="bg-white text-black text-2xl lg:text-5xl  text-center font-bold">
+    <div className="bg-black text-white text-2xl lg:text-5xl  text-center font-bold">
       <h1 className="uppercase py-5 px-5 mt-5">
         We build movement. Every pair is made for action on the street, on the
         run, on your terms.
@@ -29,10 +29,12 @@ const AboutHero = () => {
           </p>
           <p>choice is intentional. Minimalist, powerful, future-minded.</p>
         </div>
-        <div className="flex lg:flex-row flex-col gap-10 mt-15">
-          <div className="border-t-[0.1vw] border-l-[0.1vw] p-5 lg:w-1/2">
+        <div className="flex lg:flex-row flex-col gap-10 mt-15 text-black">
+          <div className="border-t-[0.1vw] border-l-[0.1vw] p-5 lg:w-1/2 ">
             <h1 className="lg:text-8xl text-5xl font-bold">800+</h1>
-            <p className="font-extralight text-xs mt-5">Shoes Tested in Motion</p>
+            <p className="font-extralight text-xs mt-5">
+              Shoes Tested in Motion
+            </p>
           </div>
           <div className="border-t-[0.1vw] border-l-[0.1vw] p-5 lg:w-1/2">
             <h1 className="lg:text-8xl text-5xl font-bold">50+</h1>

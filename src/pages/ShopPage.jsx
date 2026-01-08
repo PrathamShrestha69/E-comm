@@ -4,7 +4,7 @@ import ShopContent from "../components/ShopContent.jsx";
 
 const ShopPage = () => {
   return (
-    <div>
+    <div className="mt-20">
       <ShopHero />
       <ShopContent />
     </div>
