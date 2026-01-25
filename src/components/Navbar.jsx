@@ -76,11 +76,7 @@ const Navbar = () => {
       {/* Desktop View */}
       <div className="font-[DM_Sans] items-center justify-between px-15 py-4 bg-transparent lg:flex hidden">
         <Link to="/" className="inline-flex items-center">
-          <img
-            src="/white-logo.png"
-            alt="Nivest logo"
-            className="h-10 w-auto object-contain"
-          />
+          Nivest
         </Link>
         <div className="flex flex-row gap-5 leading-5 text-xl">
           {NavLink.map((nav) => (
@@ -168,11 +164,7 @@ const Navbar = () => {
         <div className="font-[DM_Sans] items-center justify-between px-3 bg-transparent lg:hidden flex">
           <Example isOpen={mobileMenuOpen} onToggle={setMobileMenuOpen} />
           <Link to={"/"} className="inline-flex items-center">
-            <img
-              src="/white-logo.png"
-              alt="Nivest logo"
-              className="h-10 w-24 object-contain"
-            />
+            Nivest
           </Link>
           <div>
             <HiOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
