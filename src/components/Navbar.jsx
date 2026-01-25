@@ -75,7 +75,7 @@ const Navbar = () => {
     >
       {/* Desktop View */}
       <div className="font-[DM_Sans] items-center justify-between px-15 py-4 bg-transparent lg:flex hidden">
-        <Link to="/" className="inline-flex items-center">
+        <Link to="/" className="inline-flex items-center text-xl font-bold lg:text-2xl">
           Nivest
         </Link>
         <div className="flex flex-row gap-5 leading-5 text-xl">
